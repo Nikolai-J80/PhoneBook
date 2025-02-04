@@ -1,7 +1,15 @@
 package ru.nikolai;
 
+import java.util.HashMap;
+
 public class PhoneBook {
-    public Integer add() {
-        return 0;
+    private HashMap<String, Integer> contacts;
+
+    public PhoneBook(){
+        contacts = new HashMap<String, Integer>(50);
+    }
+
+    public void add(String name, Integer phoneNumber) {
+        contacts.put(name,phoneNumber);
     }
 }
