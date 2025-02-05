@@ -12,4 +12,8 @@ public class PhoneBook {
     public void add(String name, Integer phoneNumber) {
         contacts.put(name,phoneNumber);
     }
+
+    public Integer findByNumber(Integer number) {
+        return null;
+    }
 }
