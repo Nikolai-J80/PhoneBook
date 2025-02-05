@@ -24,6 +24,6 @@ public class PhoneBookTest {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Name", 896004644);
         assertTrue(phoneBook.findByName("Name")==896004644);
-        assertTrue(phoneBook.findByName("Name")==null);
+        assertTrue(phoneBook.findByName("Noil")==null);
     }
 }
