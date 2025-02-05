@@ -1,6 +1,7 @@
 package ru.nikolai;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class PhoneBook {
     private HashMap<String, Integer> contacts;
@@ -13,7 +14,13 @@ public class PhoneBook {
         contacts.put(name,phoneNumber);
     }
 
-    public Integer findByNumber(Integer number) {
+    public String findByNumber(Integer number) {
+        for (String key : contacts.keySet()) {
+            int val = contacts.get(key);
+            if (val == number){
+                return key;
+            }
+        }
         return null;
     }
 }
