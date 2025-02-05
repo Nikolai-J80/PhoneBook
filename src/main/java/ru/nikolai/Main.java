@@ -10,5 +10,7 @@ public class Main {
         System.out.println("Номер 156664 у абонента " + pb.findByNumber(156664));
 
         System.out.println("У абонента Pit номер "+pb.findByName("Pit"));
+
+        pb.printAllNames();
     }
 }

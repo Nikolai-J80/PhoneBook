@@ -2,6 +2,7 @@ package ru.nikolai;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class PhoneBook {
     private HashMap<String, Integer> contacts;
@@ -26,5 +27,15 @@ public class PhoneBook {
 
     public Integer findByName (String name){
         return contacts.get(name);
+    }
+
+    public void printAllNames(){
+        TreeMap<String, Integer> treeMap = new TreeMap<>();
+        treeMap.putAll(contacts);
+        for (Map.Entry<String, Integer> entry : treeMap.entrySet()){
+            String key = entry.getKey();
+            int value = entry.getValue();
+            System.out.println(key + " : " + value);
+        }
     }
 }
